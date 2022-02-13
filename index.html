@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Clipboard write examples</title>
+	<title>Clipboard.write() Examples</title>
 	<style>
 		body {
 			font-family: Arial, Helvetica, sans-serif;
@@ -128,7 +128,7 @@
 
 		<h3>HTML only text (fails)</h3>
 		<p>This seems to fail as there is no <code>text/plain</code> backup. Nothing is copied to the clipboard.</p>
-		<button onclick="copyOnlyAsRichText()">Click to copy the rich text below with plaintext fallback</button>
+		<button onclick="copyOnlyAsRichText()">Click to copy the rich text below with no plaintext fallback</button>
 		<br />
 		<br />
 		<div id="copyOnlyAsRichText">Plain text and <i>HTML</i> <b>hello world</b></div>
