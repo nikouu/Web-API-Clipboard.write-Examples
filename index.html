@@ -59,7 +59,7 @@
 		async function copyOnlyAsRichText() {
 			const copyOnlyAsRichText = document.getElementById("copyOnlyAsRichText");
 
-			const clipboardItem = new ClipboardItem({				
+			const clipboardItem = new ClipboardItem({
 				"text/html": new Blob(
 					[copyOnlyAsRichText.outerHTML],
 					{ type: "text/html" }
@@ -74,18 +74,23 @@
 
 <body>
 	<h1>Examples using <code>Web API: Clipboard.write()</code></h1>
-	<p>It seemed a bit difficult to find just pure <code>text/html</code> examples for the Clipboard API. Turns out it's probably because you also need a <code>text/plain</code> backup version to also be on the clipboard too.</p>
+	<p>It seemed a bit difficult to find just pure <code>text/html</code> examples for the Clipboard API. Turns out it's
+		probably because you also need a <code>text/plain</code> backup version to also be on the clipboard too.</p>
 	<p>If this isn't the case, and I can just do a single <code>text/html</code> please send an issue or PR.</p>
-	<p>The new Clipboard API on Chromium is coming along and I spent an afternoon on the <code>text/html</code> nuances.</p>
+	<p>The new Clipboard API on Chromium is coming along and I spent an afternoon on the <code>text/html</code> nuances.
+	</p>
 	<p>These examples don't use the newer async version of the API.</p>
-	
-	
+
+
 	<ul>
 		<li><a href="https://www.w3.org/TR/clipboard-apis/#dom-clipboard-write" target="_blank">W3 spec</a></li>
-		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write" target="_blank">MDN reference</a></li>
-		<li><a href="https://chromestatus.com/feature/5357049665814528" target="_blank">Chrome release status for text/html support</a></li>
-		<li><a href="https://blog.chromium.org/2020/09/chrome-86-improved-focus-highlighting.html" target="_blank"></a>Chrome 86 release notes</li>
-		<li><a href="https://webkit.org/blog/10855/async-clipboard-api/" target="_blank"></a>Webkit documentation</li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write" target="_blank">MDN reference</a>
+		</li>
+		<li><a href="https://chromestatus.com/feature/5357049665814528" target="_blank">Chrome release status for
+				text/html support</a></li>
+		<li><a href="https://blog.chromium.org/2020/09/chrome-86-improved-focus-highlighting.html"
+				target="_blank">Chrome 86 release notes</a></li>
+		<li><a href="https://webkit.org/blog/10855/async-clipboard-api/" target="_blank">Webkit documentation</a></li>
 	</ul>
 
 	<div>
@@ -100,8 +105,10 @@
 		<hr />
 
 		<h3>Plain(raw) and HTML text</h3>
-		<p>Creates two clipboard entries, one for <code>text/plain</code> and <code>text/html</code> which it seems the operating system decides which to use based on where the data is pasted.</p>
-		<p>For the sake of an example, this copies the <code>innerText</code> value of the below div and uses it for both <code>text/plain</code> and <code>text/html</code> clipboard types.</p>
+		<p>Creates two clipboard entries, one for <code>text/plain</code> and <code>text/html</code> which it seems the
+			operating system decides which to use based on where the data is pasted.</p>
+		<p>For the sake of an example, this copies the <code>innerText</code> value of the below div and uses it for
+			both <code>text/plain</code> and <code>text/html</code> clipboard types.</p>
 		<button onclick="copyRichText()">Click to copy the rich text below</button>
 		<br />
 		<br />
@@ -110,7 +117,8 @@
 		<hr />
 
 		<h3>Plain(fallback) and HTML text</h3>
-		<p>Creates two clipboard entries, one for <code>text/plain</code> and <code>text/html</code> where the plain example is the <code>innerText</code> and the html version is the full HTML markup.</p>
+		<p>Creates two clipboard entries, one for <code>text/plain</code> and <code>text/html</code> where the plain
+			example is the <code>innerText</code> and the html version is the full HTML markup.</p>
 		<button onclick="copyRichTextWithFallback()">Click to copy the rich text below with plaintext fallback</button>
 		<br />
 		<br />
@@ -124,9 +132,5 @@
 		<br />
 		<br />
 		<div id="copyOnlyAsRichText">Plain text and <i>HTML</i> <b>hello world</b></div>
-
-
 	</div>
-
-
 </body>

@@ -8,3 +8,5 @@ Check the simple [index.html](index.html) file to see four different examples:
 2. Copying raw HTML as plain and plain text to the clipboard
 3. Copying plain fallback text and formatted HTML to the clipboard
 4. A failing copying only formatted HTML to the clipboard
+
+To see live, checkout the [Github Pages](https://nikouu.github.io/Web-API-Clipboard.write-Examples/) for this repo.
